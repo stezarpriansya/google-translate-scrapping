@@ -1,1 +1,1 @@
-# google-translate-scrapping
+translate-scraping
