@@ -6,7 +6,7 @@
 <body>
   <from action="submit-translate" method="get">
     Kata-kata : <input type="text" name="word">
-    Hasil : <input type="text" name="hasil" value="<%= result['translatedText'] %>">
+    Hasil : <input type="text" name="hasil" value="<% if(this.result){ %> <%= result['translatedText'] %> <% } %>">
     <input type="submit" value="translate now!">
   </form>
 </body>
