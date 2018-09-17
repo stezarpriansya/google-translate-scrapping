@@ -1,23 +1,30 @@
 {
-  "name": "translate-scraping",
+  "name": "google-translate-scrapping",
   "version": "1.0.0",
   "description": "ini untuk scrapping google translate",
-  "main": "app.js",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
   "dependencies": {
+    "ejs": "^2.5.6",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "google-translate": "^2.0.4",
     "google-translate-api": "^2.2.2",
     "morgan": "^1.8.1",
     "mysql": "^2.13.0",
-    "nodemon": "^1.11.0",
     "path": "^0.12.7"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "test",
-    "start": "nodemon"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stezarpriansya/google-translate-scrapping"
   },
   "author": "Stezar Priansya",
-  "license": "ISC"
+  "license": "MIT"
 }
