@@ -4,12 +4,13 @@ var bodyParser = require('body-parser')
 const translate = require('google-translate-api')
 const PORT = process.env.PORT || 5000
 express()
-	app.use(morgan('dev'))
-	app.use(bodyParser.json())
-	app.use(bodyParser.urlencoded({ extended: false }))
-
-	app.get('/translate', function(request,response){
-
+	.use(morgan('dev'))
+	.use(bodyParser.json())
+	.use(bodyParser.urlencoded({ extended: false }))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+	.get('/translate', function(request,response){
 		var query = request.query.word;
 		translate(query, {from: 'id', to: 'en'}).then(res => {
 			var isTranslated = false;
@@ -30,8 +31,4 @@ express()
 		});
 
 	})
-
-	// app.listen(5000);
-	// console.log('Server started on port 3000');
-	// module.exports = app;
-	app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+	.listen(PORT, () => console.log(`Listening on ${ PORT }`))
