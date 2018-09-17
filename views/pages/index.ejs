@@ -4,9 +4,9 @@
   <title>Google Translate API by Stezar Priansya</title>
 </head>
 <body>
-  <from action="submit-translate" method="get">
-    Kata-kata : <input type="text" name="word">
-    Hasil : <input type="text" name="hasil" value="<% if(this.result){ %> <%= result['translatedText'] %> <% } %>">
+  <from action="./submit-translate" method="get">
+    Kata-kata : <textarea name="word"> </textarea>
+    Hasil : <textarea name="hasil" > <% if(this.result){ %> <%= result['translatedText'] %> <% } %>  </textarea>
     <input type="submit" value="translate now!">
   </form>
 </body>
