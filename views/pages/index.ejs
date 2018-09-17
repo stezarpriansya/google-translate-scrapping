@@ -5,8 +5,8 @@
 </head>
 <body>
   <form action="/submit-translate" method="get">
-    Kata-kata : <textarea name="word"></textarea><br/>
-    Hasil : <textarea name="hasil" ><% if(this.result){ %> <%= result['translatedText'] %> <% } %></textarea><br/>
+    Kata-kata : <textarea name="word"><% if(this.initialText){ %> <%= initialText %> <% } %></textarea><br/>
+    Hasil : <textarea name="hasil" ><% if(this.translatedText){ %> <%= translatedText %> <% } %></textarea><br/>
     <input type="submit" value="translate now!">
   </form>
 </body>
