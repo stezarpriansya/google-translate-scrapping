@@ -14,8 +14,8 @@
     "ejs": "^2.5.6",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "google-translate": "^2.0.4",
-    "google-translate-api": "^2.2.2",
+    "google-translate": "^2.2.0",
+    "google-translate-api": "^2.3.0",
     "morgan": "^1.8.1",
     "mysql": "^2.13.0",
     "path": "^0.12.7"
